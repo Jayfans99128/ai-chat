@@ -138,7 +138,10 @@ def init_db(app):
     }
 
     # JWT配置
-    app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'your-secret-key-change-in-production')
+    jwt_secret_key = os.getenv('JWT_SECRET_KEY')
+    if not jwt_secret_key:
+        raise RuntimeError("JWT_SECRET_KEY must be configured in the environment or .env.db file")
+    app.config['JWT_SECRET_KEY'] = jwt_secret_key
     app.config['JWT_ACCESS_TOKEN_EXPIRES'] = 86400  # 24小时
 
     db.init_app(app)
