@@ -1,0 +1,2 @@
+# Install in the separate Python 3.11 RVC runtime described in VOICE_MODELS.md.
+rvc-python==0.1.5

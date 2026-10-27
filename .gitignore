@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.db.example
+.claude/settings.json
+
+# IDE and operating system
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs, databases, and generated user data
+**/logs/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+backend/data/
+
+# Local voice references and downloaded models
+extract_radio/
+Ayaka_RVC/
+test_audio*/
+*.wav
+*.mp3
+*.m4a
+*.pth
+*.pt
+*.index
+*.onnx
+
+# Local test and diagnostic artifacts
+test_*.py
+test_*.html
+test_*.txt
+create_test_user.py
+check_*.txt
+proactive_*.txt
+upgrade_plan.txt
+verify_*.bat
